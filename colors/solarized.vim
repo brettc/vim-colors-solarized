@@ -654,7 +654,9 @@ exe "hi! DiffDelete"     .s:fmt_none   .s:fg_red    .s:bg_base02
 exe "hi! DiffText"       .s:fmt_none   .s:fg_blue   .s:bg_base02 .s:sp_blue
     endif
 endif
-exe "hi! SignColumn"     .s:fmt_none   .s:fg_base0
+
+hi! link SignColumn LineNr
+
 exe "hi! Conceal"        .s:fmt_none   .s:fg_blue   .s:bg_none
 exe "hi! SpellBad"       .s:fmt_curl   .s:fg_none   .s:bg_none    .s:sp_red
 exe "hi! SpellCap"       .s:fmt_curl   .s:fg_none   .s:bg_none    .s:sp_violet
@@ -968,6 +970,17 @@ exe "hi! pandocMetadata"                 .s:fg_blue   .s:bg_none   .s:fmt_none
 exe "hi! pandocMetadataKey"              .s:fg_blue   .s:bg_none   .s:fmt_none
 exe "hi! pandocMetadata"                 .s:fg_blue   .s:bg_none   .s:fmt_bold
 hi! link pandocMetadataTitle             pandocMetadata
+
+"}}}
+" git gutter syntax highlighting "{{{
+" ---------------------------------------------------------------------
+" https://github.com/airblade/vim-gitgutter
+" ---------------------------------------------------------------------
+exe   "hi!   GitGutterAdd"          . s:fmt_none . s:fg_green   . s:bg_base02
+exe   "hi!   GitGutterChange"       . s:fmt_none . s:fg_magenta . s:bg_base02
+exe   "hi!   GitGutterDelete"       . s:fmt_none . s:fg_red     . s:bg_base02
+exe   "hi!   GitGutterChangeDelete" . s:fmt_none . s:fg_orange  . s:bg_base02
+
 
 "}}}
 " Utility autocommand "{{{
