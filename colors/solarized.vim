@@ -983,6 +983,17 @@ exe   "hi!   GitGutterChangeDelete" . s:fmt_none . s:fg_orange  . s:bg_base02
 
 
 "}}}
+" syntastic syntax highlighting "{{{
+" ---------------------------------------------------------------------
+" https://github.com/airblade/vim-gitgutter
+" ---------------------------------------------------------------------
+exe   "hi!   SyntasticErrorSign"   . s:fmt_none . s:fg_red    . s:bg_base02
+exe   "hi!   SyntasticWarningSign" . s:fmt_none . s:fg_orange . s:bg_base02
+
+" SyntasticErrorSign - For syntax errors, links to 'error' by default
+" SyntasticWarningSign - For syntax warnings, links to 'todo' by default
+
+"}}}
 " Utility autocommand "{{{
 " ---------------------------------------------------------------------
 " In cases where Solarized is initialized inside a terminal vim session and 
