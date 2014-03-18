@@ -629,7 +629,7 @@ exe "hi! Title"          .s:fmt_bold   .s:fg_orange .s:bg_none
 exe "hi! VisualNOS"      .s:fmt_stnd   .s:fg_none   .s:bg_base02 .s:fmt_revbb
 exe "hi! WarningMsg"     .s:fmt_bold   .s:fg_red    .s:bg_none
 exe "hi! WildMenu"       .s:fmt_none   .s:fg_base2  .s:bg_base02 .s:fmt_revbb
-exe "hi! Folded"         .s:fmt_undb   .s:fg_base0  .s:bg_base02  .s:sp_base03
+exe "hi! Folded"         .s:fmt_undb   .s:fg_base0  .s:bg_base02  
 exe "hi! FoldColumn"     .s:fmt_none   .s:fg_base0  .s:bg_base02
 if      (g:solarized_diffmode=="high")
 exe "hi! DiffAdd"        .s:fmt_revr   .s:fg_green  .s:bg_none
@@ -921,6 +921,11 @@ exe "hi! pandocStrikeoutHeading"             .s:fg_phead .s:bg_none.s:fmt_revr
 exe "hi! pandocVerbatimInlineHeading"        .s:fg_phead .s:bg_none.s:fmt_bold
 exe "hi! pandocSuperscriptHeading"           .s:fg_phead .s:bg_none.s:fmt_bold
 exe "hi! pandocSubscriptHeading"             .s:fg_phead .s:bg_none.s:fmt_bold
+
+let s:underbold = " term=bold,underline gui=bold,underline "
+exe "hi! pandocAtxHeader"          .s:underbold   .s:fg_orange .s:bg_base02
+exe "hi! AtxStart"          .s:underbold .s:fg_orange .s:bg_base02
+
 
 " Links
 " ---------------------------------------------------------------------
